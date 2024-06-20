@@ -1,7 +1,9 @@
 ---
-import Sidebar from '../components/Sidebar.jsx';
-import MainContainer from '../components/MainContainer.jsx';
-import '../styles/global.css'; // Import global styles
+import { renderToString } from 'react-dom/server';
+import React from 'react';
+import App from './index.jsx';
+
+// const html = ReactDOM.renderToString(<App />);
 ---
 
 <html>
@@ -9,9 +11,7 @@ import '../styles/global.css'; // Import global styles
     <title>My Portfolio</title>
   </head>
   <body class="bg-gray-100">
-    <div class="flex min-h-screen">
-      <Sidebar />
-      <MainContainer />
-    </div>
+    <!-- Render the HTML output of your React application -->
+    <App />
   </body>
 </html>
